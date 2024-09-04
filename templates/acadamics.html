@@ -1,0 +1,297 @@
+
+{% extends "base.html" %} 
+{% load static %} 
+{% block title %}{% endblock title %} 
+{% block body %}
+    <div class="container-fluid bg-white p-0">
+     {% include "include/spinner.html" %} 
+     {% include "include/navbar.html" %}
+     
+      <div class="container-fluid py-5 page-header position-relative mb-5">
+        <div class="container py-5">
+            <h1 class="display-2 text-white animated slideInDown p-5 mb-4 text-center" style="font-family: 'Kalpurush', sans-serif;">এক নজরে বিদ্যালয়ের পরিচিতি</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb ">
+                    <!-- <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Classes</li>
+                     -->
+                </ol>
+                <ol class="breadcrumb">
+                   <!-- <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Classes</li>  -->
+                    
+                </ol>
+            </nav>
+        </div>
+    </div>
+      <section>
+        <div class="container">
+            <div class="row p-5">
+                <h3>এক নজরে অধ্যায়নরত শিক্ষার্থীদের তথ্য</h3>
+                <table class="table table-bordered" cellpadding="3" cellspacing="0" style="margin: 0 auto;" width="100%">
+                            <tr>
+                                <td class="columnStyleTop">
+                                    
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <td colspan="17" class="columnStyleTop text-center">
+                                    অধ্যয়নরত শিক্ষার্থীর সংখ্যা
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="columnStyleLeft">
+                                    শ্রেণি
+                                </td>
+                                <td class="columnStyleRight" colspan="3">
+                                    <span id="ContentPlaceHolder1_txtEIIN">123839</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="columnStyleLeft">
+                                    বিদ্যালয়ের নাম :
+                                </td>
+                                <td class="columnStyleRight" colspan="3">
+                                    <span id="ContentPlaceHolder1_txtSchoonNameBn">ভিতরভাগ বাইআপ উচ্চ বিদ্যালয়</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="columnStyleLeft" style="font-family: Century Gothic; font-size: 10pt;">
+                                    SCHOOL NAME :
+                                </td>
+                                <td class="columnStyleRight" colspan="3" style="font-family: Century Gothic; font-size: 10pt;">
+                                    <span id="ContentPlaceHolder1_txtSchoonNameEn">JAMNAGAR B.L HIGH SCHOOL</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="columnStyleLeft">
+                                    গ্রাম/বাড়ী ও সড়কের বিবরণ :
+                                </td>
+                                <td class="columnStyleRight" colspan="3">
+                                    <span id="ContentPlaceHolder1_txtVillage">জামনগর বাজার</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="columnStyleLeft">
+                                    ওয়ার্ড নম্বর :
+                                </td>
+                                <td class="columnStyleRight">
+                                    <span id="ContentPlaceHolder1_txtWardNo">৫</span>
+                                </td>
+                                <td class="columnStyleLeft" style="border-left: none;">
+                                    ইউনিয়ন/পৌরসভা/সিটি কর্পোরেশন :
+                                </td>
+                                <td class="columnStyleRight">
+                                    <span id="ContentPlaceHolder1_txtCityCorp">জামনগর</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="columnStyleLeft">
+                                    পোস্ট অফিস :
+                                </td>
+                                <td class="columnStyleRight">
+                                    <span id="ContentPlaceHolder1_txtPostOffice">জামনগর বাজার</span>
+                                </td>
+                                <td class="columnStyleLeft" style="border-left: none;">
+                                    পোস্ট কোড :
+                                </td>
+                                <td class="columnStyleRight">
+                                    <span id="ContentPlaceHolder1_txtPostCode">৬৪১০</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="columnStyleLeft">
+                                    পুলিশ স্টেশন :
+                                </td>
+                                <td class="columnStyleRight">
+                                    <span id="ContentPlaceHolder1_txtThana">বাগাতিপাড়া</span>
+                                </td>
+                                <td class="columnStyleLeft" style="border-left: none;">
+                                    উপজেলা :
+                                </td>
+                                <td class="columnStyleRight">
+                                    <span id="ContentPlaceHolder1_txtUpazila">বাগাতিপাড়া</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="columnStyleLeft">
+                                    জেলা :
+                                </td>
+                                <td class="columnStyleRight">
+                                    <span id="ContentPlaceHolder1_txtDistrict">নাটোর</span>
+                                </td>
+                                <td class="columnStyleLeft" style="border-left: none;">
+                                    বিভাগ :
+                                </td>
+                                <td class="columnStyleRight">
+                                    <span id="ContentPlaceHolder1_txtDivision">রাজশাহী</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="columnStyleLeft">
+                                    মোবাইল :
+                                </td>
+                                <td class="columnStyleRight">
+                                    <span id="ContentPlaceHolder1_txtTelephone">০১৭৩১৯৫০৩৯১</span>
+                                </td>
+                                <td class="columnStyleLeft" style="font-family: Century Gothic; font-size: 11pt;
+                                    border-left: none;">
+                                    E-Mail :
+                                </td>
+                                <td class="columnStyleRight" style="font-family: Century Gothic; font-size: 9pt;">
+                                    <span id="ContentPlaceHolder1_txtEMail">jamnagarschool68@gmail.com</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="columnStyleLeft" style="font-family: Century Gothic; font-size: 11pt;">
+                                    Website :
+                                </td>
+                                <td class="columnStyleRight" style="font-family: Century Gothic; font-size: 9pt;">
+                                    <a href="http://www.jabhs.edu.bd" id="ContentPlaceHolder1_lnkWebsite" target="_blank" style="text-decoration: none; color: #FF0000;
+                                        font-weight: bold;">
+                                        <span id="ContentPlaceHolder1_txtWebsite">www.jabhs.edu.bd</span></a>
+                                </td>
+                                <td class="columnStyleLeft" style="border-left: none;">
+                                    শিক্ষার্থীর সংখ্যা :
+                                </td>
+                                <td class="columnStyleRight">
+                                    <a href="student_at_a_glance" style="text-decoration: none; color: #FF0000; font-weight: bold;">
+                                        <span id="ContentPlaceHolder1_txtTotalStudents">৫২০</span></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="columnStyleLeft">
+                                    বিদ্যালয়ের শিফট :
+                                </td>
+                                <td class="columnStyleRight">
+                                    <span id="ContentPlaceHolder1_txtSchoolShift">এক শিফট</span>
+                                </td>
+                                <td class="columnStyleLeft" style="border-left: none;">
+                                    বিদ্যালয়ের ধরণ :
+                                </td>
+                                <td class="columnStyleRight">
+                                    <span id="ContentPlaceHolder1_txtSchoolType">বালক/বালিকা</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="columnStyleLeft">
+                                    শ্রেণি কার্যক্রম :
+                                </td>
+                                <td class="columnStyleRight" colspan="3">
+                                    <table cellspacing="0">
+                                        <tr>
+                                            <td style="text-align: right; padding-right: 5px;">
+                                                প্রভাতি শিফট :
+                                            </td>
+                                            <td>
+                                                <span id="ContentPlaceHolder1_txtShiftMorningFrom">ষষ্ঠ</span>
+                                            </td>
+                                            <td style="text-align: right; padding-right: 5px;">
+                                                -
+                                            </td>
+                                            <td>
+                                                <span id="ContentPlaceHolder1_txtShiftMorningTo">দশম</span>
+                                            </td>
+                                        </tr>
+                                        
+                                        
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="columnStyleLeft">
+                                    মোট জমির পরিমান (একর) :
+                                </td>
+                                <td class="columnStyleRight">
+                                    <span id="ContentPlaceHolder1_txtTotalLand">৩</span>
+                                </td>
+                                <td class="columnStyleLeft" style="border-left: none;">
+                                    ভবন সংখ্যা :
+                                </td>
+                                <td class="columnStyleRight">
+                                    <span id="ContentPlaceHolder1_txtTotalBuilding">৭</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="columnStyleLeft">
+                                    মোট শ্রেণিকক্ষ সংখ্যা :
+                                </td>
+                                <td class="columnStyleRight">
+                                    <span id="ContentPlaceHolder1_txtTotalClassRoom">১৫</span>
+                                </td>
+                                <td class="columnStyleLeft" style="border-left: none;">
+                                    মাল্টিমিডিয়া শ্রেণিকক্ষ সংখ্যা :
+                                </td>
+                                <td class="columnStyleRight">
+                                    <span id="ContentPlaceHolder1_txtMultimediaRoom">১</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="columnStyleLeft">
+                                    আইসিটি ল্যাব সংখ্যা :
+                                </td>
+                                <td class="columnStyleRight">
+                                    <span id="ContentPlaceHolder1_txtICTLab">১</span>
+                                </td>
+                                <td class="columnStyleLeft" style="border-left: none;">
+                                    বিজ্ঞানাগার এর জন্য কক্ষ সংখ্যা :
+                                </td>
+                                <td class="columnStyleRight">
+                                    <span id="ContentPlaceHolder1_txtLaboratory">১</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="columnStyleLeft">
+                                    পাঠাগার এর জন্য কক্ষ সংখ্যা :
+                                </td>
+                                <td class="columnStyleRight">
+                                    <span id="ContentPlaceHolder1_txtLibrary">১</span>
+                                </td>
+                                <td class="columnStyleLeft" style="border-left: none;">
+                                    অডিটোরিয়াম আছে কি না :
+                                </td>
+                                <td class="columnStyleRight">
+                                    <span id="ContentPlaceHolder1_txtAuditorium">নাই</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="columnStyleLeft">
+                                    সীমানা প্রাচীর আছে কি না :
+                                </td>
+                                <td class="columnStyleRight" colspan="3">
+                                    <span id="ContentPlaceHolder1_txtBoundary">আছে</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="columnStyleRight">
+                                    খেলার মাঠ আছে কি না :
+                                </td>
+                                <td class="columnStyleRight" colspan="3">
+                                    <span id="ContentPlaceHolder1_txtBoundary">আছে</span>
+                                </td>
+                            </tr>
+                        </table>
+                            </div>
+        </div>
+        
+
+      
+        
+      </section> 
+  
+{% endblock body %}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,315 @@
+{% extends "base.html" %} 
+{% load static %} 
+{% block title %}Admission{% endblock title %} 
+{% block body %}
+    <div class="container-fluid bg-white p-0">
+      {% include "include/spinner.html" %} 
+      {% include "include/navbar.html" %} 
+    
+
+      <section style="border-top-style: outset">
+        <div class="container" id="form-mpz">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="online-header-wapper">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="online-header" style="text-align: center;">
+                      <h1 style="font-family: 'Kalpurush', sans-serif;">ভর্তির আবেদন ফরম</h1>
+                      <hr>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="instructions-wrapper">
+                    <div class="instructions-text">
+                      <div class="instructions-header bg-light">
+                        <h3 style="font-family: 'Kalpurush', sans-serif;">নির্দেশনা</h3>
+                      </div>
+                      <div class="instructions-paragrap">
+                        <p>
+                          অনুগ্রহ করে আপনার প্রতিষ্ঠানের অনলাইন ভর্তির শর্তাবলী
+                          এখানে লিখুন.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="details-main-wrapper">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="basic-detils-header">
+                      <h3>Basic Details</h3>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="basic-form-wrapper">
+                      <div class="row p-3">
+
+
+                        <div class="col-md-6">
+                          <div class="basic-item">
+                            <label for="class">শিক্ষার্থীর নাম (বাংলায়)</label>
+                            <input type="text" name="student_name_bangla" class="form-control" id="class" required />
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="basic-item">
+                            <label for="class">শিক্ষার্থীর নাম (ইংরেজি)</label>
+                            <input type="text" name="student_name_english" class="form-control" id="class" />
+                          </div>
+                        </div>
+
+                        
+
+
+                        <div class="col-md-6">
+                          <div class="basic-item">
+                            <label for="class">পিতার নাম (বাংলায়)</label>
+                            <input type="text" name="father_name_bangla" class="form-control" id="class" />
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="basic-item">
+                            <label for="class">পিতার নাম (ইংরেজি)</label>
+                            <input type="text" name="father_name_english" class="form-control" id="class" />
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="basic-item">
+                            <label for="class">পিতার জাতীয় পরিচয় পত্র নং</label>
+                            <input type="text" name="father_nid" class="form-control" id="class" />
+                          </div>
+                        </div>
+
+
+                        <div class="col-md-6">
+                          <div class="basic-item">
+                            <label for="class">মাতার নাম (বাংলায়)</label>
+                            <input type="text" name="mother_name_bangla" class="form-control" id="class" />
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="basic-item">
+                            <label for="class">মাতার নাম (ইংরেজি)</label>
+                            <input type="text" name="mother_name_english" class="form-control" id="class" />
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="basic-item">
+                            <label for="class">মাতার জাতীয় পরিচয় পত্র নং</label>
+                            <input type="text" name="mother_nid" class="form-control" id="class" />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="basic-item">
+                            <label for="class">স্থায়ী ঠিকানা</label>
+                            <input type="text" name="Permanent_address" class="form-control" id="class" />
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="basic-item">
+                            <label for="class">বর্তমান ঠিকানা</label>
+                            <input type="text" name="Current_address" class="form-control" id="class" />
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="basic-item">
+                            <label for="class">পিতা/মাতার বাৎসরিক আয়</label>
+                            <input type="text" name="father_mother_yearly_income" class="form-control" id="class" />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="basic-item">
+                            <label for="class">অভিভাবকের মোবাইল নম্বার (ইংরেজি)</label>
+                            <input type="text" name="Parents_mobile_number" class="form-control" id="class" />
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="basic-item">
+                            <label for="class"> পেশা</label>
+                            <input type="text" name="occupation" class="form-control" id="class" />
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="basic-item">
+                            <label for="class"> পিতা মাতার অবর্তমানে বৈধ অভিভাবকের নাম</label>
+                            <input type="text" name="name_legal_guardian" class="form-control" id="class" />
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="basic-item">
+                            <label for="class"> ঠিকানা</label>
+                            <input type="text" name="address" class="form-control" id="class" />
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="basic-item">
+                            <label for="class"> জাতীয়তা</label>
+                            <input type="text" name="nationality" class="form-control" id="class" />
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="basic-item">
+                            <label for="class"> ধর্ম</label>
+                            <input type="text" name="religion" class="form-control" id="class" />
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="basic-item">
+                            <label for="class"> জন্ম তারিখ</label>
+                            <input type="date" name="date_of_birth" class="form-control" id="class" />
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="basic-item">
+                            <label for="class"> বয়স</label>
+                            <input type="text" name="student_age" class="form-control" id="class" />
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="basic-item">
+                            <label for="class"> জাতীয় জন্ম নিবন্ধন নম্বার</label>
+                            <input type="text" name="national_birth_registration_number" class="form-control" id="class" />
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="basic-item">
+                            <label for="class"> পূর্বে যে বিদ্যালয়ে ছাত্র/ছাত্রী ছিল তাহার নাম</label>
+                            <input type="text" name="student_old_school_name" class="form-control" id="class" />
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="basic-item">
+                            <label for="class"> যে শ্রেণীতে ভর্তি হতে ইচ্ছুক</label>
+                            <select name="Student_admitted" class="form-control" id="class"> 
+                                <option selected disabled value="">নিচের ক্লাসটি সিলেক্ট কর</option>
+                                <option value="6">ষষ্ঠ</option>
+                                <option value="7">সপ্তম</option>
+                                <option value="8">অষ্টম</option>
+                                <option value="9">নবম</option>
+                                <option value="10">দশম</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="basic-item">
+                            <label for="class"> যে শ্রেণীতে অধ্যায়নরত ছিল</label>
+                            <input type="text" name="student_old_class_name" class="form-control" id="class" />
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="basic-item">
+                            <label for="class"> শেষ যে পরীক্ষায় উত্তীর্ণ হয়েছে তার নাম </label>
+                            <input type="text" name="name_of_last_exam" class="form-control" id="class" />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="basic-item">
+                            <label for="class"> রেজাল্ট(জি.পি.এ) </label>
+                            <input type="text" name="student_permit" class="form-control" id="class" />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="basic-item">
+                            <label for="class"> ছাড়পত্র নং </label>
+                            <input type="text" name="student_permit" class="form-control" id="class" />
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="basic-item">
+                            <label for="class"> ছাত্র/ছাত্রী কোন পেশায় জড়িত থাকলে পেশার নাম</label>
+                            <input type="text" name="student_involved_job" class="form-control" id="class" />
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="basic-item">
+                            <label for="class">কোটা</label>
+                            <input type="text" name="student_quota" class="form-control" id="class" />
+                          </div>
+                        </div>
+                        <label for="class">Upload Documents</label>
+                        <hr>
+                        <div class="col-md-3">
+                          <div class="basic-item">
+                            <label for="class">জন্ম নিবন্ধন</label>
+                            <input type="file" name="student_documents" class="form-control" id="class" />
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="basic-item">
+                            <label for="class">পিতার এন.আই.ডি</label>
+                            <input type="file" name="student_documents" class="form-control" id="class" />
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="basic-item">
+                            <label for="class">মাতার এন.আই.ডি</label>
+                            <input type="file" name="student_documents" class="form-control" id="class" />
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="basic-item">
+                            <label for="class">শিক্ষার্থীর ছবি (ব্যাকগ্রাউন্ডের কালার সাদা) </label>
+                            <input type="file" name="student_photo" class="form-control" id="class" />
+                          </div>
+                        </div>
+
+                       
+                        
+
+
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--++++++++++++++++button-detils start +++++++++++++++++++-->
+
+          <div class="submit-button" id="admission-submit-button">
+            <input class="btn btn-primary" type="submit" value="Submit" />
+          </div>
+          <!--++++++++++++++++button-detils ends +++++++++++++++++++-->
+        </div>
+      </section>
+
+{% endblock body %}

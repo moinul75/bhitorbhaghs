@@ -1,0 +1,149 @@
+{% extends "base.html" %} 
+{% load static %} 
+{% block title %}যোগাযোগ{% endblock title %} 
+{% block body %}
+    <div class="container-fluid bg-white p-0">
+      {% include "include/spinner.html" %} 
+      {% include "include/navbar.html" %}
+  
+
+    <!-- Contact Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h1 class="mb-3" style="font-family: 'Kalpurush', sans-serif;">যোগাযোগ</h1>
+                <p style='text-align: center;'>
+                    অষ্টাদশ শতকের অর্ধবঙ্গেশ্বরী রাণী ভবানীর স্মৃতি বিজড়িত বিদগ্ধ প্রকৃতি প্রেমী কবি জীবনান্দ দাশের কল্পলোকের প্রেয়সী বনলতা সেন, রসনাতৃপ্ত সু-স্বাদু অবাক সন্দেশ, কাঁচাগোল্লা আর দৃষ্টি নন্দন অপূর্ব কারুকার্য্য খচিত উত্তরা গণভবন খ্যাত ঐতিহ্যবাহী নাটোর জেলার ছোট একটি উপজেলা বাগাতিপাড়া। মালঞ্চি রেলওয়ে ষ্টেশনের ১৫ কিঃ মিঃ পশ্চিমে বড়াল নদীর তীরে ২নং জামনগর ইউনিয়ন একটি ছায়া ঢাকা প্রাকৃতিক সৌন্দর্যের লিলাভূমি। এখানকার মানুষ অধিকাংশই কৃষি কাজ করে। চারিদিকে সবুজের সমারোহ, দক্ষিন পাশ দিয়ে আকাবাকা বয়ে যাওয়া বড়াল নদী এ এলাকাকে করেছে আরও সুন্দর। আর  এই নদীর পাশ ঘেষেই ভিতরভাগ বাইআপ উচ্চ বিদ্যালয়। এটি ১৯৬৮ সালে স্থাপিত হয়।  এই প্রতিষ্ঠানে বর্তমানে ৫০০ এরও অধিক ছাত্র্রছাত্রী পড়াশোনা করে। 
+                  </p>
+            </div>
+            <div class="row g-4 mb-5"> 
+              {% for contact in contact %}
+                <div class="col-md-6 col-lg-4 text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 75px; height: 75px;">
+                        <i class="fa fa-map-marker-alt fa-2x text-primary"></i>
+                    </div>
+                    <h6 style="font-family: 'Kalpurush', sans-serif;">ভিতরভাগ, বাগাতিপাড়া,নাটোর।</h6>
+                </div>
+                <div class="col-md-6 col-lg-4 text-center wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 75px; height: 75px;">
+                        <i class="fa fa-envelope-open fa-2x text-primary"></i>
+                    </div>
+                    <h6>bhitorbhaghs@gmail.com</h6>
+                </div>
+                <div class="col-md-6 col-lg-4 text-center wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 75px; height: 75px;">
+                        <i class="fa fa-phone-alt fa-2x text-primary"></i>
+                    </div>
+                    <h6 style="font-family: 'Kalpurush', sans-serif;">০১৭১২৫০২২২৮</h6>
+                </div> 
+              {% endfor %}
+            </div>
+            <!-- Appointment Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="bg-light rounded">
+            <div class="row g-0">
+              <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                <div
+                  class="h-100 d-flex flex-column justify-content-center p-5"
+                >
+                  <h2 class="mb-4" style="font-family: 'Kalpurush', sans-serif;"> জরুরী বার্তা পাঠান</h2>
+                  <form>
+                    <div class="row g-3">
+                      <div class="col-sm-6">
+                        <div class="form-floating">
+                          <input
+                            type="text"
+                            class="form-control border-0"
+                            id="gname"
+                            placeholder="Gurdian Name"
+                          />
+                          <label style="font-family: 'Kalpurush', sans-serif;" for="gname">অভিভাবক এর নাম</label>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="form-floating">
+                          <input
+                            type="email"
+                            class="form-control border-0"
+                            id="gmail"
+                            placeholder="Gurdian Email"
+                          />
+                          <label style="font-family: 'Kalpurush', sans-serif;" for="gname">অভিভাবক এর ই-মেইল</label>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="form-floating">
+                          <input
+                            type="text"
+                            class="form-control border-0"
+                            id="cname"
+                            placeholder="Child Name"
+                          />
+                          <label style="font-family: 'Kalpurush', sans-serif;" for="gname">শিক্ষার্থীর নাম</label>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="form-floating">
+                          <input
+                            type="text"
+                            class="form-control border-0"
+                            id="cage"
+                            placeholder="Child Age"
+                          />
+                          <label style="font-family: 'Kalpurush', sans-serif;" for="gname">শ্রেনী</label>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="form-floating">
+                          <textarea
+                            class="form-control border-0"
+                            placeholder="Leave a message here"
+                            id="message"
+                            style="height: 100px"
+                          ></textarea>
+                          <label style="font-family: 'Kalpurush', sans-serif;" for="gname">মেসেজ লিখুন</label>
+                        </div>
+                      </div>
+                      <div class="col-12" style="font-family: 'Kalpurush', sans-serif;">
+                        <button
+                          class="btn btn-primary w-100 py-3"
+                          type="submit"
+                        >
+                          পাঠান
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div
+                class="col-lg-6 wow fadeIn"
+                data-wow-delay="0.5s"
+                style="min-height: 400px"
+              >
+                <div class="position-relative h-100">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8737.530106751956!2d88.85915910215304!3d24.34247072152346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fc095da45bf563%3A0x802596e47e0ec690!2z4Kat4Ka_4Kak4KawIOCmreCmvuCmlyDgpqzgpr7gpocg4KaG4KaqIOCmieCmmuCnjeCmmiDgpqzgpr_gpqbgp43gpq_gpr7gprLgp58!5e1!3m2!1sen!2sbd!4v1695540440625!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Appointment End -->
+        </div>
+    </div>
+    <!-- Contact End -->  
+
+{% endblock body %}
+
+
+
+     
+
+     
+      
+
+  

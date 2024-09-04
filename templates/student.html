@@ -1,0 +1,403 @@
+{% extends "base.html" %} 
+{% load static %}  
+{% block title %}শিক্ষার্থীদের তথ্য{% endblock title %}
+{% block body %}
+    <div class="container-fluid bg-white p-0">
+    {% include "include/spinner.html" %} 
+    {% include "include/navbar.html" %}
+
+      <section>
+        <div class="container">
+            <div class="row p-5 text-center">
+              <div class="col-sm-12">
+                <h2 style="font-family: 'Kalpurush', sans-serif;"> অধ্যয়নরত শিক্ষার্থীর সংখ্যা</h2>
+                <hr>
+              <div class="table-responsive{-sm|-md|-lg|-xl|-xxl}">
+                <table class="table table-bordered" cellpadding="3" cellspacing="0" style="margin: 0 auto;" width="100%">
+                  <tr style="text-align: center;" >
+                      <td rowspan="2" class="columnStyleTop">
+                          শ্রেণি
+                        </td>
+                        <td  rowspan="2" class="columnStyleTop">
+                          শিফট
+                        </td>
+                        <td rowspan="2" class="columnStyleTop">
+                          সেকশন
+                        </td>
+                      
+                      <td colspan="3"  class="columnStyleTop">
+                          শিক্ষার্থী
+                      </td>
+                      <td colspan="4" class="columnStyleTop">
+                          ধর্ম
+                      </td>
+                      <td colspan="3" class="columnStyleTop">
+                          বিভাগ
+                      </td>
+                      <td colspan="2" class="columnStyleTop">
+                          মুক্তিযোদ্ধা
+                      </td>
+                      <td colspan="2" class="columnStyleTop">
+                          প্রতিবন্ধি
+                      </td>
+                  </tr>
+                  <tr style="text-align: center;">
+                    
+                    <td class="columnStyleTop">
+                      ছেলে
+                    </td>
+                    <td class="columnStyleTop">
+                      মেয়ে
+                    </td>
+                    <td class="columnStyleTop">
+                      মোট
+                    </td>
+                    <td class="columnStyleTop">
+                      মুসলিম
+                    </td>
+                    <td class="columnStyleTop">
+                      হিন্দু
+                    </td>
+                    <td class="columnStyleTop">
+                      বৌদ্ধ
+                    </td>
+                    <td class="columnStyleTop">
+                      খ্রিস্টান
+                    </td>
+                    <td class="columnStyleTop">
+                      বিজ্ঞান
+                    </td>
+                    <td class="columnStyleTop">
+                      ব্যব.শি	
+                    </td>
+                    <td class="columnStyleTop">
+                      মানবিক
+                    </td>
+                    <td class="columnStyleTop">
+                      সন্তান
+                    </td>
+                    <td class="columnStyleTop">
+                      স.সন্তান	
+                    </td>
+                    <td class="columnStyleTop">
+                      অটিস্টিক
+                    </td>
+                    <td class="columnStyleTop">
+                      শারীরিক
+                    </td>
+                    
+                </tr>
+                <tr style="text-align: center;">
+                    
+                  <td class="columnStyleTop">
+                      ষষ্ঠ
+                    </td>
+                    <td class="columnStyleTop">
+                      Morning
+                    </td>
+                    <td class="columnStyleTop">
+                      A
+                    </td>
+                  <td class="columnStyleTop">
+                    ২০
+                  </td>
+                  <td class="columnStyleTop">
+                    ৩০
+                  </td>
+                  <td class="columnStyleTop">
+                    ৫০
+                  </td>
+                  <td class="columnStyleTop">
+                    ৩৮
+                  </td>
+                  <td class="columnStyleTop">
+                    ১২
+                  </td>
+                  <td class="columnStyleTop">
+                    ০
+                  </td>
+                  <td class="columnStyleTop">
+                    ০
+                  </td>
+                  <td class="columnStyleTop">
+                    প্রযোজ্য নয়
+                  </td>
+                  <td class="columnStyleTop">
+                      প্রযোজ্য নয়
+                  </td>
+                  <td class="columnStyleTop">
+                      প্রযোজ্য নয়
+                  </td>
+                  <td class="columnStyleTop">
+                    ০
+                  </td>
+                  <td class="columnStyleTop">
+                   ০
+                  </td>
+                  <td class="columnStyleTop">
+                    ০
+                  </td>
+                  <td class="columnStyleTop">
+                    ০
+                  </td>
+                  
+              </tr>
+              <tr style="text-align: center;">
+                    
+                  <td class="columnStyleTop">
+                      সপ্তম
+                    </td>
+                    <td class="columnStyleTop">
+                      Morning
+                    </td>
+                    <td class="columnStyleTop">
+                      A
+                    </td>
+                  <td class="columnStyleTop">
+                    ২০
+                  </td>
+                  <td class="columnStyleTop">
+                    ৩০
+                  </td>
+                  <td class="columnStyleTop">
+                    ৫০
+                  </td>
+                  <td class="columnStyleTop">
+                    ৩৮
+                  </td>
+                  <td class="columnStyleTop">
+                    ১২
+                  </td>
+                  <td class="columnStyleTop">
+                    ০
+                  </td>
+                  <td class="columnStyleTop">
+                    ০
+                  </td>
+                  <td class="columnStyleTop">
+                    প্রযোজ্য নয়
+                  </td>
+                  <td class="columnStyleTop">
+                      প্রযোজ্য নয়
+                  </td>
+                  <td class="columnStyleTop">
+                      প্রযোজ্য নয়
+                  </td>
+                  <td class="columnStyleTop">
+                    ০
+                  </td>
+                  <td class="columnStyleTop">
+                   ০
+                  </td>
+                  <td class="columnStyleTop">
+                    ০
+                  </td>
+                  <td class="columnStyleTop">
+                    ০
+                  </td>
+                  
+              </tr>
+              <tr style="text-align: center;">
+                    
+                  <td class="columnStyleTop">
+                      অষ্টম
+                    </td>
+                    <td class="columnStyleTop">
+                      Morning
+                    </td>
+                    <td class="columnStyleTop">
+                      A
+                    </td>
+                  <td class="columnStyleTop">
+                    ২০
+                  </td>
+                  <td class="columnStyleTop">
+                    ৩০
+                  </td>
+                  <td class="columnStyleTop">
+                    ৫০
+                  </td>
+                  <td class="columnStyleTop">
+                    ৩৮
+                  </td>
+                  <td class="columnStyleTop">
+                    ১২
+                  </td>
+                  <td class="columnStyleTop">
+                    ০
+                  </td>
+                  <td class="columnStyleTop">
+                    ০
+                  </td>
+                  <td class="columnStyleTop">
+                    প্রযোজ্য নয়
+                  </td>
+                  <td class="columnStyleTop">
+                      প্রযোজ্য নয়
+                  </td>
+                  <td class="columnStyleTop">
+                      প্রযোজ্য নয়
+                  </td>
+                  <td class="columnStyleTop">
+                    ০
+                  </td>
+                  <td class="columnStyleTop">
+                   ০
+                  </td>
+                  <td class="columnStyleTop">
+                    ০
+                  </td>
+                  <td class="columnStyleTop">
+                    ০
+                  </td>
+                  
+              </tr>
+              <tr style="text-align: center;">
+                    
+                  <td class="columnStyleTop">
+                      নবম
+                    </td>
+                    <td class="columnStyleTop">
+                      Morning
+                    </td>
+                    <td class="columnStyleTop">
+                      A
+                    </td>
+                  <td class="columnStyleTop">
+                    ২০
+                  </td>
+                  <td class="columnStyleTop">
+                    ৩০
+                  </td>
+                  <td class="columnStyleTop">
+                    ৫০
+                  </td>
+                  <td class="columnStyleTop">
+                    ৩৮
+                  </td>
+                  <td class="columnStyleTop">
+                    ১২
+                  </td>
+                  <td class="columnStyleTop">
+                    ০
+                  </td>
+                  <td class="columnStyleTop">
+                    ০
+                  </td>
+                  <td class="columnStyleTop">
+                    ২০
+                  </td>
+                  <td class="columnStyleTop">
+                     ০
+                  </td>
+                  <td class="columnStyleTop">
+                      ৩০
+                  </td>
+                  <td class="columnStyleTop">
+                    ০
+                  </td>
+                  <td class="columnStyleTop">
+                   ০
+                  </td>
+                  <td class="columnStyleTop">
+                    ০
+                  </td>
+                  <td class="columnStyleTop">
+                    ০
+                  </td>
+                  
+              </tr>
+              <tr style="text-align: center;">
+                    
+                  <td class="columnStyleTop">
+                      দশম
+                    </td>
+                    <td class="columnStyleTop">
+                      Morning
+                    </td>
+                    <td class="columnStyleTop">
+                      A
+                    </td>
+                  <td class="columnStyleTop">
+                    ৩৫
+                  </td>
+                  <td class="columnStyleTop">
+                   ২০
+                  </td>
+                  <td class="columnStyleTop">
+                    ৫৫
+                  </td>
+                  <td class="columnStyleTop">
+                    ৫০
+                  </td>
+                  <td class="columnStyleTop">
+                    ৫
+                  </td>
+                  <td class="columnStyleTop">
+                    ০
+                  </td>
+                  <td class="columnStyleTop">
+                    ০
+                  </td>
+                  <td class="columnStyleTop">
+                    ৪০
+                  </td>
+                  <td class="columnStyleTop">
+                      ১৫
+                  </td>
+                  <td class="columnStyleTop">
+                      ০
+                  </td>
+                  <td class="columnStyleTop">
+                    ০
+                  </td>
+                  <td class="columnStyleTop">
+                   ০
+                  </td>
+                  <td class="columnStyleTop">
+                    ০
+                  </td>
+                  <td class="columnStyleTop">
+                    ০
+                  </td>
+                  
+              </tr>
+                
+                  
+              </table>
+              </div>
+ 
+              </div>
+              
+            </div>
+
+        </div>
+        
+      </section> 
+  
+{% endblock body %}
+
+
+
+        
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

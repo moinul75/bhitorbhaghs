@@ -1,0 +1,46 @@
+{% load static %} 
+      <!-- Navbar Start -->
+      <div class="row">
+        <div class="title text-center pt-2 bg-light">
+          <!-- <h1>ভিতরভাগ বাইআপ উচ্চ বিদ্যালয়</h1>
+          <h4>স্বাপিতঃ ১৯৬৮ </h4>
+<h4> ডাকঘরঃ জামনগর, উপজেলাঃ বাগাতিপাড়া, জেলাঃ নাটোর</h4> -->
+          <img class="img-fluid" src="{% static "img/Header-01.jpg" %}" alt="">
+           
+          </p>
+        </div>
+      </div>
+      <nav
+        class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0"
+      >
+        <!-- <a class="navbar-brand" href="index.html" class="navbar-brand">
+          <img class="logo" src="img/logo.png" alt="" />
+        </a> -->
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav mx-auto navitem">
+            <a href="{% url "home" %}" class="nav-item nav-link active">হোম</a>
+            <a href="{% url "admission" %}" class="nav-item nav-link">ভর্তির আবেদন</a>
+            <a href="{% url "notice" %}" class="nav-item nav-link">নোটিশ</a>
+            <a href="{% url "results" %}" class="nav-item nav-link">ফলাফল</a>
+            <a href="{% url "about" %}" class="nav-item nav-link">প্রতিষ্ঠান সম্পর্কিত</a>
+            <a href="{% url "acadamics" %}" class="nav-item nav-link">একাডেমিক তথ্য</a>
+            <a href="{% url "teachers" %}" class="nav-item nav-link">শিক্ষকবৃন্দ</a>
+            <a href="{% url "students" %}" class="nav-item nav-link">শিক্ষার্থীদের তথ্য</a>
+            <a href="{% url "gallary" %}" class="nav-item nav-link">ফটো গ্যালারী</a>
+            <a href="{% url "contact" %}" class="nav-item nav-link">যোগাযোগ</a>
+            
+          </div>
+          <!-- <a href="" class="btn btn-primary rounded-pill px-3 d-none d-lg-block"
+            >লগইন<i class="fa fa-arrow-right ms-3"></i
+          ></a> -->
+        </div>
+      </nav>
+      <!-- Navbar End -->

@@ -1,0 +1,312 @@
+{% extends "base.html" %} 
+{% load static %}  
+{% load form_extras %}
+{% block title %}ভিতরভাগ বাইআপ উচ্চ বিদ্যালয়{% endblock title %}
+{% block body %}
+    <div class="container-fluid bg-white p-0">
+     {% include "include/spinner.html" %}
+
+      {% include "include/navbar.html" %}
+
+      {% include "include/carosoul.html" %}
+
+    
+      <!-- About Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+              <h1 class="mb-4" style="font-family: 'Kalpurush', sans-serif;">
+                এক নজরে প্রতিষ্ঠান এর ইতিহাস
+              </h1>
+              <p style='text-align: justify;'>
+                অষ্টাদশ শতকের অর্ধবঙ্গেশ্বরী রাণী ভবানীর স্মৃতি বিজড়িত বিদগ্ধ প্রকৃতি প্রেমী কবি জীবনান্দ দাশের কল্পলোকের প্রেয়সী বনলতা সেন, রসনাতৃপ্ত সু-স্বাদু অবাক সন্দেশ, কাঁচাগোল্লা আর দৃষ্টি নন্দন অপূর্ব কারুকার্য্য খচিত উত্তরা গণভবন খ্যাত ঐতিহ্যবাহী নাটোর জেলার ছোট একটি উপজেলা বাগাতিপাড়া। মালঞ্চি রেলওয়ে ষ্টেশনের ১৫ কিঃ মিঃ পশ্চিমে বড়াল নদীর তীরে ২নং জামনগর ইউনিয়ন একটি ছায়া ঢাকা প্রাকৃতিক সৌন্দর্যের লিলাভূমি। এখানকার মানুষ অধিকাংশই কৃষি কাজ করে। চারিদিকে সবুজের সমারোহ, দক্ষিন পাশ দিয়ে আকাবাকা বয়ে যাওয়া বড়াল নদী এ এলাকাকে করেছে আরও সুন্দর। আর  এই নদীর পাশ ঘেষেই ভিতরভাগ বাইআপ উচ্চ বিদ্যালয়। এটি ১৯৬৮ সালে স্থাপিত হয়।  এই প্রতিষ্ঠানে বর্তমানে ৫০০ এরও অধিক ছাত্র্রছাত্রী পড়াশোনা করে। 
+              </p>
+              <p class="mb-4">
+                
+                
+              </p>
+              <div class="row g-4 align-items-center">
+                <div class="col-sm-6">
+                  <a class="btn btn-primary rounded-pill py-3 px-5" href=""
+                    >Read More</a
+                  >
+                </div>
+                <div class="col-sm-6">
+                  <div class="d-flex align-items-center">
+                    
+                    <div class="ms-3">
+                     
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 about-img wow fadeInUp" data-wow-delay="0.5s">
+              <div class="row">
+                <div class="col-12 text-center">
+                  <img
+                    class="img-fluid w-75 rounded-circle bg-light p-3"
+                    src="{% static "img/about_v.jpg" %}"
+                    alt=""
+                  />
+                </div>
+                <div class="col-6 text-start" style="margin-top: -150px">
+                  <img
+                    class="img-fluid w-200 rounded-circle bg-light p-3"
+                    src="{% static "img/about_2.jpg" %}"
+                    alt=""
+                  />
+                </div>
+                <div class="col-6 text-end" style="margin-top: -150px">
+                  <img
+                    class="img-fluid w-100 rounded-circle bg-light p-3"
+                    src="{% static "img/about_3.jpg" %}"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- About End -->
+
+      <!-- Call To Action Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="bg-light rounded">
+            <div class="row g-0">
+              <div
+                class="col-lg-6 wow fadeIn"
+                data-wow-delay="0.1s"
+                style="min-height: 400px"
+              >
+                <div class="position-relative h-100">
+                  <img
+                    class="position-absolute w-100 h-100 rounded"
+                    src="{% static "img/call-to-action1.jpg" %}"
+                    style="object-fit: cover"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                <div
+                  class="h-100 d-flex flex-column justify-content-center p-5"
+                >
+                  <h3 class="mb-4" style="font-family: 'Kalpurush', sans-serif;">প্রধান শিক্ষকের বাণী</h3>
+                  <p class="mb-4" style='text-align: justify;'>
+                    শিক্ষাই জাতির মেরুদন্ড। কাজেই সবার জন্য শিক্ষা অর্জন করা মানুষের মৌলিক অধিকার। এ অধিকারকে যথাযথভাবে বাস্তবায়নের মাধ্যমে বিশ্বের অনেক দেশ আজ উন্নত দেশ হিসেবে উন্নতির চরম শিখরে আরোহণ করেছে। এ ক্ষেত্রে বাংলাদেশ তার কাঙ্ক্ষিত লক্ষ্য অর্জনে সাধ্যমত চেষ্টা চালিয়ে যাচ্ছে। যুগের সাথে সংগতিপূর্ণ বিকাশের জন্য আমরা প্রত্যেকেই ভাবি নিজ নিজ সন্তানদের নিয়ে। প্রকৃতির সন্তান মানব শিশুকে পরিশুদ্ধ হতে হয়, পরিপুর্ণ হতে হয় স্বীয় সাধনায়। এ ক্ষেত্রে শিক্ষায় হলো আমাদের মূলমন্ত্র। আমরা দৃঢ়ভাবে বিশ্বাস করি শিক্ষার মৌলিক উদ্দেশ্য হলো আচরণের কাঙ্ক্ষিত পরিবর্তন। আর এ লক্ষ্যে তাদেরকে সৃজনশীল, স্বাধীন, সক্রিয় এবং দায়িত্বশীল সুনাগরিক হিসেবে গড়ে তোলা। এ জন্য প্রয়োজন যোগ্য শিক্ষকমন্ডলী এবং উপযুক্ত শিক্ষাদান পদ্ধতির সমন্বয়ে একটি শিক্ষাবান্ধব পরিবেশ। আমি বিনয়ের সাথে দাবী করি, ভিতরভাগ বাইআপ উচ্চ বিদ্যালয়ে এসব কিছুর সমন্বয় ঘটানো সম্ভব হয়েছে। শিক্ষার্থীদের মজ্জাগত প্রতিভা সহজে বিকাশের জন্য প্রতিষ্ঠানটিতে রয়েছে সাধারণ শিক্ষার পাশাপাশি কম্পিউটার শিক্ষা, সাংস্কৃতিক, আনুষ্ঠানিক, খেলাধুলাসহ নানাবিধ শিক্ষা।
+                  </p>
+                  <p style='text-align: left;'><b>হাজেরা খাতুন</b> <br>
+                    <b>প্রধান শিক্ষক</b> <br>
+                    ভিতরভাগ বাইআপ উচ্চ বিদ্যালয়
+                  </p>
+                  <!-- <a class="btn btn-primary py-3 px-5" href=""
+                    >Get Started Now<i class="fa fa-arrow-right ms-2"></i
+                  ></a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+<!-- Team Start -->
+<div class="container-xxl py-5">
+  <div class="container">
+    <div
+      class="text-center mx-auto mb-5 wow fadeInUp"
+      data-wow-delay="0.1s"
+      style="max-width: 600px"
+    >
+      <h1 class="mb-3" style="font-family: 'Kalpurush', sans-serif;">শেষ্ঠ শিক্ষকবৃন্দ</h1>
+      <hr>
+      
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="team-item position-relative">
+          <img
+            class="img-fluid rounded w-75"
+            src="{% static "img/team-one.jpg" %}"
+            alt=""
+          />
+          <div class="team-text">
+            <h3 style="font-family: 'Kalpurush', sans-serif;">হাজেরা খাতুন</h3>
+            <p>প্রধান শিক্ষক</p>
+            <div class="d-flex align-items-center">
+              <a class="btn btn-square btn-primary mx-1" href=""
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a class="btn btn-square btn-primary mx-1" href=""
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a class="btn btn-square btn-primary mx-1" href=""
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="team-item position-relative">
+          <img
+            class="img-fluid rounded w-75"
+            src="{% static "img/team-two.jpg" %}"
+            alt=""
+          />
+          <div class="team-text">
+            <h3 style="font-family: 'Kalpurush', sans-serif;">নাসির উদ্দিন</h3>
+            <p>সহকারি শিক্ষক </p>
+            <div class="d-flex align-items-center">
+              <a class="btn btn-square btn-primary mx-1" href=""
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a class="btn btn-square btn-primary mx-1" href=""
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a class="btn btn-square btn-primary mx-1" href=""
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+        <div class="team-item position-relative">
+          <img
+            class="img-fluid rounded w-75"
+            src="{% static "img/team-three.jpg" %}"
+            alt=""
+          />
+          <div class="team-text">
+            <h3 style="font-family: 'Kalpurush', sans-serif;">আব্দুল হাকিম</h3>
+            <p>সহকারি শিক্ষক</p>
+            <div class="d-flex align-items-center">
+              <a class="btn btn-square btn-primary mx-1" href=""
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a class="btn btn-square btn-primary mx-1" href=""
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a class="btn btn-square btn-primary mx-1" href=""
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Team End -->
+    <!-- Appointment Start -->
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="bg-light rounded">
+      <div class="row g-0">
+        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+          <div class="h-100 d-flex flex-column justify-content-center p-5">
+            <h2 class="mb-4" style="font-family: 'Kalpurush', sans-serif;">জরুরী বার্তা পাঠান</h2>
+            <form method="post">
+              {% csrf_token %}
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <div class="form-floating">
+                    {{ form.gurdian_name|add_class:"form-control border-0" }}
+                    <label style="font-family: 'Kalpurush', sans-serif;" for="{{ form.gurdian_name.id_for_label }}">অভিভাবক এর নাম</label>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-floating">
+                    {{ form.gurdian_email|add_class:"form-control border-0" }}
+                    <label style="font-family: 'Kalpurush', sans-serif;" for="{{ form.gurdian_email.id_for_label }}">অভিভাবক এর ই-মেইল</label>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-floating">
+                    {{ form.student_name|add_class:"form-control border-0" }}
+                    <label style="font-family: 'Kalpurush', sans-serif;" for="{{ form.student_name.id_for_label }}">শিক্ষার্থীর নাম</label>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-floating">
+                    {{ form.class_name|add_class:"form-control border-0" }}
+                    <label style="font-family: 'Kalpurush', sans-serif;" for="{{ form.class_name.id_for_label }}">শ্রেনী</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-floating">
+                    {{ form.message|add_class:"form-control border-0" }}
+                    <label style="font-family: 'Kalpurush', sans-serif;" for="{{ form.message.id_for_label }}">মেসেজ লিখুন</label>
+                  </div>
+                </div>
+                <div class="col-12" style="font-family: 'Kalpurush', sans-serif;">
+                  <button class="btn btn-primary w-100 py-3" type="submit">পাঠান</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px">
+          <div class="position-relative h-100">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8737.530106751956!2d88.85915910215304!3d24.34247072152346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fc095da45bf563%3A0x802596e47e0ec690!2z4Kat4Ka_4Kak4KawIOCmreCmvuCmlyDgpqzgpr7gpocg4KaG4KaqIOCmieCmmuCnjeCmmiDgpqzgpr_gpqbgp43gpq_gpr7gprLgp58!5e1!3m2!1sen!2sbd!4v1695540440625!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Appointment End -->
+
+
+      
+
+      <!-- Testimonial Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div
+            class="text-center mx-auto mb-5 wow fadeInUp"
+            data-wow-delay="0.1s"
+            style="max-width: 600px"
+          >
+            <h1 class="mb-3" style="font-family: 'Kalpurush', sans-serif;">শিক্ষামূলক ও শিক্ষা সম্পর্কিত বিখ্যাত মনীষীদের বিখ্যাত কিছু উক্তি</h1>
+            <p>
+              জীবনের উন্নয়নের প্রধান সোপানই হল শিক্ষা । যুগে যুগে মনীষীরা শিক্ষা বিষয়ক নানা উক্তি আমাদের জন্য রেখে যান । সেই শিক্ষামূলক উক্তিগুলি আমাদের জীবনের বিভিন্ন পদক্ষেপ রচনা করতে সাহায্য করে আসছে । আজ বিভিন্ন মনীষীর শিক্ষা সম্পর্কিত ও শিক্ষামূলক উক্তিগুলি থেকে বাছাই করা কিছু গুরুত্বপূর্ণ উক্তি এখানে তুলে আনা হলো।
+            </p>
+          </div>
+          <div
+            class="owl-carousel testimonial-carousel wow fadeInUp"
+            data-wow-delay="0.1s"
+          > 
+          {% for qoute in qoutes %}
+              <div class="testimonial-item bg-light rounded p-5">
+                <p class="fs-5">
+                  {{ qoute.quote }}
+                </p>
+                <div
+                  class="d-flex align-items-center bg-white me-n5"
+                  style="border-radius: 50px 0 0 50px"
+                >
+                  <img
+                    class="img-fluid flex-shrink-0 rounded-circle"
+                    src="{{ qoute.image.url }}"
+                    style="width: 90px; height: 90px"
+                  />
+                  <div class="ps-3">
+                    <h3 class="mb-1"style="font-family: 'Kalpurush', sans-serif;">{{ qoute.writer_name }}</h3>
+                    
+                  </div>
+                  <i
+                    class="fa fa-quote-right fa-3x text-primary ms-auto d-none d-sm-flex"
+                  ></i>
+                </div>
+              </div> 
+          {% endfor %}
+          </div>
+        </div>
+      </div>
+      <!-- Testimonial End -->
+
+{% endblock body %}

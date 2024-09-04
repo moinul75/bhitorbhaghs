@@ -1,0 +1,137 @@
+{% extends "base.html" %} 
+{% load static %}  
+{% load humanize %}
+{% block title %}Gallary{% endblock title %} 
+{% block body %}
+    <div class="container-fluid bg-white p-0">
+      {% include "include/spinner.html" %} 
+      {% include "include/navbar.html" %}
+
+   
+
+      
+
+    <!-- Contact Start -->
+
+<section>
+   
+        <div class="container">
+            <div class="row">
+                {% for gal in gallary %}
+                <div class="col-4">
+                    <div class="card mb-3">
+                        <img src="{{ gal.image.url }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title" style="font-family: 'Kalpurush', sans-serif;">{{ gal.title }}</h5>
+                          <p class="card-text">{{ gal.description }}</p>
+                          <p class="card-text"><small class="text-body-secondary">Last updated {{ gal.updated_at|naturaltime }}</small></p>
+                        </div>
+                      </div>
+                </div> 
+                {% endfor %}
+            </div>
+            
+        </div> 
+        
+          
+    
+</section>
+
+
+
+
+    <!-- <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card" id="event-card-item">
+                                <div class="event-image">
+                                    <img src="image/result.jpg" class="card-img-top img-fluid" alt="Photo">
+                                </div>
+                                <div class="card-body" id="event-text">
+                                    <a href="#"><h5 class="card-title">2023 Result giving ceremony.</h5></a>
+                                    <p class="card-text">This is a longer card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card" id="event-card-item">
+                                <div class="event-image">
+                                    <img src="image/Bangladesh Independence Day,.jpg" class="card-img-top img-fluid" alt="Photo">
+                                </div>
+                                <div class="card-body" id="event-text">
+                                    <a href="#"><h5 class="card-title">Bangladesh Independence Day</h5></a>
+                                    <p class="card-text">This is a longer card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small class="text-muted">Last updated 30 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card" id="event-card-item">
+                                <div class="event-image">
+                                    <img src="image/Madrasha.jpg" class="card-img-top img-fluid" alt="Photo">
+                                </div>
+                                <div class="card-body" id="event-text">
+                                   <a href="#"> <h5 class="card-title">Waz Mahfil Dhaka Duihazarchoy</h5></a>
+                                    <p class="card-text">This is a longer card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small class="text-muted">Last updated 50 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card" id="event-card-item">
+                                <div class="event-image">
+                                    <img src="image/metting.jpg" class="card-img-top img-fluid" alt="Photo">
+                                </div>
+                                <div class="card-body" id="event-text">
+                                   <a href="#"> <h5 class="card-title">Meeting Event Madrasha</h5></a>
+                                    <p class="card-text">This is a longer card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card" id="event-card-item">
+                                <div class="event-image">
+                                    <img src="image/Eid-E-Milad-Un-Nabi-2019_amp.jpg" class="card-img-top img-fluid" alt="Photo">
+                                </div>
+                                <div class="card-body" id="event-text">
+                                   <a href="#"> <h5 class="card-title">Eid Milad-un-Nabi 2022</h5></a>
+                                    <p class="card-text">This is a longer card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small class="text-muted">Last updated 30 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card" id="event-card-item">
+                                <div class="event-image">
+                                    <img src="image/islamic-festival-eid-mubarak-crescent-moon-religious-background-vector_1055-13250.jpg" class="card-img-top img-fluid" alt="Photo">
+                                </div>
+                                <div class="card-body" id="event-text">
+                                    <a href="#"><h5 class="card-title">Romjan Event Madrasha</h5></a>
+                                    <p class="card-text">This is a longer card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small class="text-muted">Last updated 50 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                       
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Contact End -->
+
+     
+{% endblock body %}
