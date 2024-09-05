@@ -26,18 +26,19 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <div class="navbar-nav mx-auto navitem">
-            <a href="{% url "home" %}" class="nav-item nav-link active">হোম</a>
-            <a href="{% url "admission" %}" class="nav-item nav-link">ভর্তির আবেদন</a>
-            <a href="{% url "notice" %}" class="nav-item nav-link">নোটিশ</a>
-            <a href="{% url "results" %}" class="nav-item nav-link">ফলাফল</a>
-            <a href="{% url "about" %}" class="nav-item nav-link">প্রতিষ্ঠান সম্পর্কিত</a>
-            <a href="{% url "acadamics" %}" class="nav-item nav-link">একাডেমিক তথ্য</a>
-            <a href="{% url "teachers" %}" class="nav-item nav-link">শিক্ষকবৃন্দ</a>
-            <a href="{% url "students" %}" class="nav-item nav-link">শিক্ষার্থীদের তথ্য</a>
-            <a href="{% url "gallary" %}" class="nav-item nav-link">ফটো গ্যালারী</a>
-            <a href="{% url "contact" %}" class="nav-item nav-link">যোগাযোগ</a>
-            
+            <a href="{% url 'home' %}" class="nav-item nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">হোম</a>
+            <a href="{% url 'admission' %}" class="nav-item nav-link {% if request.resolver_match.url_name == 'admission' %}active{% endif %}">ভর্তির আবেদন</a>
+            <a href="{% url 'notice' %}" class="nav-item nav-link {% if request.resolver_match.url_name == 'notice' %}active{% endif %}">নোটিশ</a>
+            <a href="{% url 'results' %}" class="nav-item nav-link {% if request.resolver_match.url_name == 'results' %}active{% endif %}">ফলাফল</a>
+            <a href="{% url 'about' %}" class="nav-item nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}">প্রতিষ্ঠান সম্পর্কিত</a>
+            <a href="{% url 'acadamics' %}" class="nav-item nav-link {% if request.resolver_match.url_name == 'acadamics' %}active{% endif %}">একাডেমিক তথ্য</a>
+            <a href="{% url 'teachers' %}" class="nav-item nav-link {% if request.resolver_match.url_name == 'teachers' %}active{% endif %}">শিক্ষকবৃন্দ</a>
+            <a href="{% url 'students' %}" class="nav-item nav-link {% if request.resolver_match.url_name == 'students' %}active{% endif %}">শিক্ষার্থীদের তথ্য</a>
+            <a href="{% url 'gallary' %}" class="nav-item nav-link {% if request.resolver_match.url_name == 'gallary' %}active{% endif %}">ফটো গ্যালারী</a>
+            <a href="{% url 'contact' %}" class="nav-item nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">যোগাযোগ</a>
           </div>
+        </div>
+        
           <!-- <a href="" class="btn btn-primary rounded-pill px-3 d-none d-lg-block"
             >লগইন<i class="fa fa-arrow-right ms-3"></i
           ></a> -->
