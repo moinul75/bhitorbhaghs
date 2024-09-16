@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect 
 from django.views.generic import TemplateView 
-from .models import Qoutes,Gallary,Slider,Contact
+from .models import Qoutes,Gallary,Slider,Contact,Notice
 from .forms import ComplainForm
 
 # Create your views here. 
@@ -29,8 +29,13 @@ class AboutView(TemplateView):
     
     
     
-class NoticeView(TemplateView):
-    template_name = 'notice.html' 
+class NoticeView(TemplateView): 
+    template_name = 'notice.html'  
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['notice'] = Notice.objects.all() 
+        return context
     
     
 class ContactView(TemplateView):
