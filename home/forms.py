@@ -13,6 +13,29 @@ class ComplainForm(forms.ModelForm):
 class StudentAdmissionForm(forms.ModelForm):
     birth_date = forms.DateField(widget=forms.DateInput(attrs={'type': 'date'}), label="জন্ম তারিখ")
 
+    # Example of increasing the size of text fields that might require more space
+    permanent_address = forms.CharField(
+        widget=forms.Textarea(attrs={'rows': 1, 'placeholder': 'স্থায়ী ঠিকানা লিখুন'}),
+        label="স্থায়ী ঠিকানা"
+    )
+    
+    present_address = forms.CharField(
+        widget=forms.Textarea(attrs={'rows': 1, 'placeholder': 'বর্তমান ঠিকানা লিখুন'}),
+        label="বর্তমান ঠিকানা"
+    )
+    
+    guardian_address = forms.CharField(
+        widget=forms.Textarea(attrs={'rows': 1, 'placeholder': 'অভিভাবকের ঠিকানা লিখুন'}),
+        label="ঠিকানা"
+    )
+    
+    # You can modify other fields similarly if necessary
+    student_job = forms.CharField(
+        widget=forms.Textarea(attrs={'rows': 1, 'placeholder': 'পেশার নাম লিখুন'}),
+        label="ছাত্র/ছাত্রী কোন পেশায় জড়িত থাকলে পেশার নাম"
+    )
+    
+    # Other fields remain unchanged
     class Meta:
         model = StudentAdmission
         fields = [

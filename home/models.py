@@ -131,7 +131,7 @@ class Gallary(models.Model):
 
 
 #notice Section 
-class Notice(TimeStampedModel): 
+class Notice(TimeStampedModel):  
     title = models.TextField(verbose_name="শিরোনাম") 
     attachment = models.FileField(upload_to='Notice/',null=True,blank=True,verbose_name="নোটিশ তথ্য PDF") 
     
