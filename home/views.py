@@ -1,6 +1,7 @@
+from typing import Any
 from django.shortcuts import render,redirect 
 from django.views.generic import TemplateView 
-from .models import Qoutes,Gallary,Slider,Contact,Notice
+from .models import Qoutes,Gallary,Slider,Contact,Notice,SchoolInfo,Teacher
 from .forms import ComplainForm,StudentAdmissionForm 
 from django.contrib import messages 
 from django.views.generic.edit import FormView
@@ -77,11 +78,22 @@ class AdmissionView(FormView):
 
 
 class AcadamicsView(TemplateView): 
-    template_name = 'acadamics.html' 
+    template_name = 'acadamics.html'
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        school_info = SchoolInfo.objects.first() 
+        context['school_info'] = school_info
+        return context
     
 
 class  TeachersView(TemplateView): 
     template_name = 'teacher.html' 
+    
+    def get_context_data(self, **kwargs):
+        context =  super().get_context_data(**kwargs) 
+        context['teachers'] = Teacher.objects.all().order_by('-id') 
+        return context 
     
     
 class StuentsView(TemplateView): 

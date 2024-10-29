@@ -1,294 +1,58 @@
-{% extends "base.html" %}  
+{% extends "base.html" %}
 {% load static %}
-{% block title %}{% endblock title %} 
+{% block title %}শিক্ষকমন্ডলী{% endblock title %}
+
 {% block body %}
-    <div class="container-fluid bg-white p-0">
-      {% include "include/spinner.html" %} 
-      {% include "include/navbar.html" %}
-    
-      <div class="container">
-        
+<div class="container-fluid bg-white p-0">
+    {% include "include/spinner.html" %}
+    {% include "include/navbar.html" %}
+
+    <div class="container">
         <div class="container-xxl py-5">
             <div class="container">
-              <div
-                class="text-center mx-auto mb-5 wow fadeInUp"
-                data-wow-delay="0.1s"
-                style="max-width: 600px"
-              >
-                <h1 class="mb-3" style="font-family: 'Kalpurush', sans-serif;">শিক্ষকমন্ডলী</h1>
-                <hr>
-                
-              </div>
-              <div class="row mt-5">
-                <div class="col-md-3">
-                    <div class="teacher-wrapper text-center">
-                        <div class="techer-image">
-                            <img src="{% static "img/মাহমুদা.png" %}" alt="teacher-image" class="img-fluid">
-                        </div>
-                        <div class="teacher-titel">
-                            <h2 style="font-family: 'Kalpurush', sans-serif;">মোছাঃ মাহমুদা খাতুন</h2>
-
-                            <h3 style="font-family: 'Kalpurush', sans-serif;">প্রধান শিক্ষক</h3>
-                            <!-- <p>এম.এ, বি.এড</p> -->
-                        </div>
-                        <div class="teacher-icon">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <i class="fa-brands fa-instagram"></i>
-                            <i class="fa-brands fa-linkedin"></i>
-                            <i class="fa-brands fa-twitter"></i>
-                            <i class="fa-brands fa-youtube"></i>
-                        </div>
-                    </div>
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px">
+                    <h1 class="mb-3" style="font-family: 'Kalpurush', sans-serif;">শিক্ষকমন্ডলী</h1>
+                    <hr>
                 </div>
-                <div class="col-md-3">
-                    <div class="teacher-wrapper text-center">
-                        <div class="techer-image">
-                            <img src="{% static "img/Biplob.png" %}" alt="teacher-image" class="img-fluid">
-                        </div>
-                        <div class="teacher-titel">
-                            <h2 style="font-family: 'Kalpurush', sans-serif;">মোঃ জামাল উদ্দীন</h2>
 
-                            <h3 style="font-family: 'Kalpurush', sans-serif;">সহকারী শিক্ষক</h3>
-                            <!-- <p>বি.এস.সি , বি.এড</p> -->
+                <div class="row mt-5">
+                    {% for teacher in teachers %}
+                        <div class="col-md-3">
+                            <div class="teacher-wrapper text-center">
+                                <div class="techer-image">
+                                    {% if teacher.image %}
+                                        <img src="{{ teacher.image.url }}" alt="teacher-image" class="img-fluid">
+                                    {% else %}
+                                        <img src="{% static 'img/default-teacher.png' %}" alt="teacher-image" class="img-fluid">
+                                    {% endif %}
+                                </div>
+                                <div class="teacher-titel">
+                                    <h2 style="font-family: 'Kalpurush', sans-serif;">{{ teacher.name }}</h2>
+                                    <h3 style="font-family: 'Kalpurush', sans-serif;">{{ teacher.designation }}</h3>
+                                </div>
+                                <div class="teacher-icon">
+                                    {% if teacher.facebook %}
+                                        <a href="{{ teacher.facebook }}" target="_blank" style="color: inherit;"><i class="fa-brands fa-facebook-f"></i></a>
+                                    {% endif %}
+                                    {% if teacher.instagram %}
+                                        <a href="{{ teacher.instagram }}" target="_blank" style="color: inherit;"><i class="fa-brands fa-instagram"></i></a>
+                                    {% endif %}
+                                    {% if teacher.linkedin %}
+                                        <a href="{{ teacher.linkedin }}" target="_blank" style="color: inherit;"><i class="fa-brands fa-linkedin"></i></a>
+                                    {% endif %}
+                                    {% if teacher.twitter %}
+                                        <a href="{{ teacher.twitter }}" target="_blank" style="color: inherit;"><i class="fa-brands fa-twitter"></i></a>
+                                    {% endif %}
+                                    {% if teacher.youtube %}
+                                        <a href="{{ teacher.youtube }}" target="_blank" style="color: inherit;"><i class="fa-brands fa-youtube"></i></a>
+                                    {% endif %}
+                                </div>
+                            </div>
                         </div>
-                        <div class="teacher-icon">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <i class="fa-brands fa-instagram"></i>
-                            <i class="fa-brands fa-linkedin"></i>
-                            <i class="fa-brands fa-twitter"></i>
-                            <i class="fa-brands fa-youtube"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="teacher-wrapper text-center">
-                        <div class="techer-image">
-                            <img src="{% static "img/শেখসাদী.png" %}" alt="teacher-image" class="img-fluid">
-                        </div>
-                        <div class="teacher-titel">
-                            <h2 style="font-family: 'Kalpurush', sans-serif;">মোঃ শেখসাদী</h2>
-
-                            <h3 style="font-family: 'Kalpurush', sans-serif;">সহকারী শিক্ষক গণিত</h3>
-                            <!-- <p>বি.এ , বি.এড</p> -->
-                        </div>
-                        <div class="teacher-icon">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <i class="fa-brands fa-instagram"></i>
-                            <i class="fa-brands fa-linkedin"></i>
-                            <i class="fa-brands fa-twitter"></i>
-                            <i class="fa-brands fa-youtube"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="teacher-wrapper text-center">
-                        <div class="techer-image">
-                            <img src="{% static "img/নজরুল.png" %}" alt="teacher-image" class="img-fluid">
-                        </div>
-                        <div class="teacher-titel">
-                            <h2 style="font-family: 'Kalpurush', sans-serif;">মোঃ নজরুল ইসলাম</h2>
-
-                            <h3 style="font-family: 'Kalpurush', sans-serif;">সহকারী শিক্ষক(ক্রিড়া)</h3>
-                            <!-- <p>বি.এ , বি.এড</p> -->
-                        </div>
-                        <div class="teacher-icon">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <i class="fa-brands fa-instagram"></i>
-                            <i class="fa-brands fa-linkedin"></i>
-                            <i class="fa-brands fa-twitter"></i>
-                            <i class="fa-brands fa-youtube"></i>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
-            <div class="row mt-5">
-               <div class="col-md-3">
-                    <div class="teacher-wrapper text-center">
-                        <div class="techer-image">
-                            <img src="{% static "img/আলী.png" %}" alt="teacher-image" class="img-fluid">
-                        </div>
-                        <div class="teacher-titel">
-                            <h2 style="font-family: 'Kalpurush', sans-serif;">আলী আহমেদ</h2>
-
-                            <h3 style="font-family: 'Kalpurush', sans-serif;">সহকারি শিক্ষক</h3>
-                            <!-- <p>বি.এ , বি.এড</p> -->
-                        </div>
-                        <div class="teacher-icon">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <i class="fa-brands fa-instagram"></i>
-                            <i class="fa-brands fa-linkedin"></i>
-                            <i class="fa-brands fa-twitter"></i>
-                            <i class="fa-brands fa-youtube"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="teacher-wrapper text-center">
-                        <div class="techer-image">
-                            <img src="{% static "img/রমজান.png" %}" alt="teacher-image" class="img-fluid">
-                        </div>
-                        <div class="teacher-titel">
-                          <h2 style="font-family: 'Kalpurush', sans-serif;">মোঃ রমজান আলী</h2>
-
-                          <h3 style="font-family: 'Kalpurush', sans-serif;">সহকারী শিক্ষক
-</h3>
-                          <!-- <p>এম.এ কৃষি(ডিপ্লোমা) , বি.এড</p> -->
-                      </div>
-                        <div class="teacher-icon">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <i class="fa-brands fa-instagram"></i>
-                            <i class="fa-brands fa-linkedin"></i>
-                            <i class="fa-brands fa-twitter"></i>
-                            <i class="fa-brands fa-youtube"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="teacher-wrapper text-center">
-                        <div class="techer-image">
-                            <img src="{% static "img/সাইফুল.png" %}" alt="teacher-image" class="img-fluid">
-                        </div>
-                        <div class="teacher-titel">
-                          <h2 style="font-family: 'Kalpurush', sans-serif;">মোঃ সাইফুল ইসলাম</h2>
-
-                          <h3 style="font-family: 'Kalpurush', sans-serif;">সহকারি শিক্ষক</h3>
-                          <!-- <p>বি.এ , বি.এড</p> -->
-                      </div>
-                        <div class="teacher-icon">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <i class="fa-brands fa-instagram"></i>
-                            <i class="fa-brands fa-linkedin"></i>
-                            <i class="fa-brands fa-twitter"></i>
-                            <i class="fa-brands fa-youtube"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="teacher-wrapper text-center">
-                        <div class="techer-image">
-                            <img src="{% static "img/জাহেদুল.png" %}" alt="teacher-image" class="img-fluid">
-                        </div>
-                        <div class="teacher-titel">
-                          <h2 style="font-family: 'Kalpurush', sans-serif;">মোঃ জাহেদুল ইসলাম</h2>
-
-                          <h3 style="font-family: 'Kalpurush', sans-serif;">অফিস সহকারী</h3>
-                          <!-- <p>বি.এস.এস(সম্মান) , এম.এস.এস</p> -->
-                      </div>
-                        <div class="teacher-icon">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <i class="fa-brands fa-instagram"></i>
-                            <i class="fa-brands fa-linkedin"></i>
-                            <i class="fa-brands fa-twitter"></i>
-                            <i class="fa-brands fa-youtube"></i>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="row mt-5">
-              <div class="col-md-3">
-                <div class="teacher-wrapper text-center">
-                    <div class="techer-image">
-                        <img src="{% static "img/মুনজুর.png" %}" alt="teacher-image" class="img-fluid">
-                    </div>
-                    <div class="teacher-titel">
-                      <h2 style="font-family: 'Kalpurush', sans-serif;">মোঃ মুনজুর রহমান  </h2>
-
-                      <h3 style="font-family: 'Kalpurush', sans-serif;">সহকারী শিক্ষক (আইসিটি)</h3>
-                      <!-- <p>বি.এ(সম্মান) , এম.এ</p> -->
-                  </div>
-                    <div class="teacher-icon">
-                        <i class="fa-brands fa-facebook-f"></i>
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-linkedin"></i>
-                        <i class="fa-brands fa-twitter"></i>
-                        <i class="fa-brands fa-youtube"></i>
-                    </div>
-                </div>
-            </div>
-                <div class="col-md-3">
-                    <div class="teacher-wrapper text-center">
-                        <div class="techer-image">
-                            <img src="{% static "img/সাত্তার.png" %}" alt="teacher-image" class="img-fluid">
-                        </div>
-                        <div class="teacher-titel">
-                          <h2 style="font-family: 'Kalpurush', sans-serif;">মোঃসাত্তার আলী </h2>
-
-                          <h3 style="font-family: 'Kalpurush', sans-serif;">পিয়ন</h3>
-                          <!-- <p>বি.এস.সি, এম.এস.সি</p> -->
-                      </div>
-                        <div class="teacher-icon">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <i class="fa-brands fa-instagram"></i>
-                            <i class="fa-brands fa-linkedin"></i>
-                            <i class="fa-brands fa-twitter"></i>
-                            <i class="fa-brands fa-youtube"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="teacher-wrapper text-center">
-                        <div class="techer-image">
-                            <img src="{% static "img/রফিকুল (2).png" %}" alt="teacher-image" class="img-fluid">
-                        </div>
-                        <div class="teacher-titel">
-                          <h2 style="font-family: 'Kalpurush', sans-serif;">মোঃরফিকুল ইসলাম</h2>
-
-                          <h3 style="font-family: 'Kalpurush', sans-serif;">সহকারী শিক্ষক </h3>
-                          <!-- <p>এম.এ, ডিপ্লোমা ইন সাইন্স</p> -->
-                      </div>
-                     
-                        <div class="teacher-icon">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <i class="fa-brands fa-instagram"></i>
-                            <i class="fa-brands fa-linkedin"></i>
-                            <i class="fa-brands fa-twitter"></i>
-                            <i class="fa-brands fa-youtube"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="teacher-wrapper text-center">
-                        <div class="techer-image">
-                            <img src="{% static "img/আফছার.png" %}" alt="teacher-image" class="img-fluid">
-                        </div>
-                        <div class="teacher-titel">
-                          <h2 style="font-family: 'Kalpurush', sans-serif;"> মোঃআফছার আলী</h2>
-
-                          <h3 style="font-family: 'Kalpurush', sans-serif;">দফতরি</h3>
-                          <!-- <p>এইচ.এস.সি</p> -->
-                      </div>
-                        <div class="teacher-icon">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <i class="fa-brands fa-instagram"></i>
-                            <i class="fa-brands fa-linkedin"></i>
-                            <i class="fa-brands fa-twitter"></i>
-                            <i class="fa-brands fa-youtube"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-          </div>
-    
-    
+        </div>
     </div>
-    </div> 
-
+</div>
 {% endblock body %}
-
-
-
-
-
-
-   
-     
-
-     
-      
-
-     
-
-      
-
