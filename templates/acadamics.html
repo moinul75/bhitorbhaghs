@@ -100,15 +100,16 @@
                         </tr>
                         <tr>
                             <td class="columnStyleLeft"> অডিটোরিয়াম আছে কি না: </td>
-                            <td class="columnStyleRight">{{ school_info.has_auditorium }}</td>
+                            <td class="columnStyleRight">{% if school_info.has_auditorium %}আছে{% else %}নাই{% endif %}</td>
                         </tr>
                         <tr>
                             <td class="columnStyleLeft"> সীমানা প্রাচীর আছে কি না: </td>
-                            <td class="columnStyleRight">{{ school_info.has_boundary_wall }}</td>
+                            <td class="columnStyleRight">{% if school_info.has_boundary_wall %}আছে{% else %}নাই{% endif %}</td>
                         </tr>
                         <tr>
                             <td class="columnStyleLeft"> খেলার মাঠ আছে কি না: </td>
-                            <td class="columnStyleRight">{{ school_info.has_playground }}</td>
+                            
+                            <td class="columnStyleRight">{% if school_info.has_playground %}আছে{% else %}নাই{% endif %}</td>
                         </tr>
                     </table>
                 </div>

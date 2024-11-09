@@ -147,6 +147,10 @@ class ExamResult(models.Model):
     exam_name = models.CharField(max_length=255, verbose_name="পরীক্ষার নাম")  
     year = models.IntegerField(verbose_name="সাল")  # Year
     total_students = models.PositiveIntegerField(verbose_name="মোট পরীক্ষার্থী")  
+    
+    #total boys and girls 
+    total_boys = models.PositiveIntegerField(verbose_name="মোট পরীক্ষার্থী (Boys)",default=0)   
+    total_girls = models.PositiveIntegerField(verbose_name="মোট পরীক্ষার্থী (Girls)",default=0)   
 
     # Passing students (boys and girls)
     passing_students_boys = models.PositiveIntegerField(verbose_name="পাসকৃত শিক্ষার্থী (Boys)")  
@@ -324,4 +328,39 @@ class StudentAdmission(models.Model):
     
     class Meta:
         verbose_name_plural = "ভর্তির আবেদন ফরম"
-        ordering = ['-id'] 
+        ordering = ['-id']  
+        
+        
+class IntroductionSchool(TimeStampedModel):
+    school_elln = models.CharField("বিদ্যালয়ের EIIN", max_length=255, null=True, blank=True)
+    school_name_bn = models.CharField("বিদ্যালয়ের নাম", max_length=255, null=True, blank=True)
+    school_name_en = models.CharField("SCHOOL NAME", max_length=255, null=True, blank=True)
+    village_or_road = models.CharField("গ্রাম/বাড়ী ও সড়কের বিবরণ", max_length=255, null=True, blank=True)
+    word_no = models.CharField("ওয়ার্ড নম্বর", max_length=50, null=True, blank=True)
+    post_office = models.CharField("পোস্ট অফিস", max_length=255, null=True, blank=True)
+    police_station = models.CharField("পুলিশ স্টেশন", max_length=255, null=True, blank=True)
+    district = models.CharField("জেলা", max_length=255, null=True, blank=True)
+    mobile_no = models.CharField("মোবাইল", max_length=15, null=True, blank=True)
+    website = models.CharField("Website", max_length=255, null=True, blank=True)
+    school_shit = models.CharField("বিদ্যালয়ের শিফট", max_length=255, null=True, blank=True)
+    school_activites = models.CharField("শ্রেণি কার্যক্রম", max_length=255, null=True, blank=True)
+    total_land = models.CharField("মোট জমির পরিমান (একর)", max_length=50, null=True, blank=True)
+    total_classroom = models.CharField("মোট শ্রেণিকক্ষ সংখ্যা", max_length=50, null=True, blank=True)
+    total_ict_lab = models.CharField("আইসিটি ল্যাব সংখ্যা", max_length=50, null=True, blank=True)
+    total_library_room = models.CharField("পাঠাগার এর জন্য কক্ষ সংখ্যা", max_length=50, null=True, blank=True)
+    has_boundary = models.BooleanField("সীমানা প্রাচীর আছে কি না", null=True, blank=True)
+    has_playground = models.BooleanField("খেলার মাঠ আছে কি না", null=True, blank=True)
+    union_city_corparation = models.CharField("ইউনিয়ন/পৌরসভা/সিটি কর্পোরেশন", max_length=255, null=True, blank=True)
+    post_code = models.CharField("পোস্ট কোড", max_length=10, null=True, blank=True)
+    upozila = models.CharField("উপজেলা", max_length=255, null=True, blank=True)
+    division = models.CharField("বিভাগ", max_length=255, null=True, blank=True)
+    email = models.CharField("E-Mail", max_length=255, null=True, blank=True)
+    total_students = models.CharField("শিক্ষার্থীর সংখ্যা", max_length=50, null=True, blank=True)
+    school_chars = models.CharField("বিদ্যালয়ের ধরণ", max_length=255, null=True, blank=True)
+    total_vobon = models.CharField("ভবন সংখ্যা", max_length=50, null=True, blank=True)
+    total_multimedia_room = models.CharField("মাল্টিমিডিয়া শ্রেণিকক্ষ সংখ্যা", max_length=50, null=True, blank=True)
+    total_room_for_science = models.CharField("বিজ্ঞানাগার এর জন্য কক্ষ সংখ্যা", max_length=50, null=True, blank=True)
+    has_auditorium = models.BooleanField("অডিটোরিয়াম আছে কি না", null=True, blank=True)
+
+    def __str__(self):
+        return self.school_name_en or "বিদ্যালয়ের পরিচিতি"

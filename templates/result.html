@@ -6,158 +6,58 @@
     {% include "include/spinner.html" %} 
     {% include "include/navbar.html" %}
 
-      
-      <section>
+    <section>
         <div class="container">
             <div class="row p-5 text-center">
               <h2 style="font-family: 'Kalpurush', sans-serif;"> পাবলিক পরীক্ষার ফলাফল</h2>
               <hr>
-<table class="table table-bordered" cellpadding="3" cellspacing="0" style="margin: 0 auto;" width="100%">
-            <tr style="text-align: center;" >
-                <td class="columnStyleTop">
-                  পরীক্ষার নাম	
-                </td>
-                <td class="columnStyleTop">
-                  সাল
-                </td>
-                <td colspan="3"  class="columnStyleTop">
-                  মোট পরীক্ষার্থী
-                </td>
-                <td colspan="3" class="columnStyleTop">
-                  পাসকৃত শিক্ষার্থী
-                </td>
-                <td colspan="3" class="columnStyleTop">
-                  জিপিএ ৫.০০
-                </td>
-                <td colspan="3" class="columnStyleTop">
-                  পাসের হার
-                </td>
-                
-            </tr>
-            <tr style="text-align: center;">
-              <td class="columnStyleTop">
-                	
-              </td>
-              <td class="columnStyleTop">
-                
-              </td>
-              <td class="columnStyleTop">
-                ছেলে
-              </td>
-              <td class="columnStyleTop">
-                মেয়ে
-              </td>
-              <td class="columnStyleTop">
-                মোট
-              </td>
-              <td class="columnStyleTop">
-                ছেলে
-              </td>
-              <td class="columnStyleTop">
-                মেয়ে
-              </td>
-              <td class="columnStyleTop">
-                মোট
-              </td>
-              <td class="columnStyleTop">
-                ছেলে
-              </td>
-              <td class="columnStyleTop">
-                মেয়ে
-              </td>
-              <td class="columnStyleTop">
-                মোট
-              </td>
-              <td class="columnStyleTop">
-                
-              </td>
-              
-          </tr>
-          <tr style="text-align: center;">
-            <td class="columnStyleTop">
-                এস.এস.সি
-            </td>
-            <td class="columnStyleTop">
-              ২০২৩
-            </td>
-            <td class="columnStyleTop">
-              
-            </td>
-            <td class="columnStyleTop">
-              
-            </td>
-            <td class="columnStyleTop">
-              ১০৪
-            </td>
-            <td class="columnStyleTop">
-              
-            </td>
-            <td class="columnStyleTop">
-             
-            </td>
-            <td class="columnStyleTop">
-              ৯১
-            </td>
-            <td class="columnStyleTop">
-              
-            <td class="columnStyleTop">
-              
-            </td>
-            <td class="columnStyleTop">
-              ০
-            </td>
-            <td class="columnStyleTop">
-              ৮৭.৫০
-            </td>
-            
-        </tr>
-        <tr style="text-align: center;">
-          <td class="columnStyleTop">
-              জে.এস.সি
-          </td>
-          <td class="columnStyleTop">
-            ২০২৩
-          </td>
-          <td class="columnStyleTop">
-            
-          </td>
-          <td class="columnStyleTop">
-            
-          </td>
-          <td class="columnStyleTop">
-            ১০৪
-          </td>
-          <td class="columnStyleTop">
-            
-          </td>
-          <td class="columnStyleTop">
-           
-          </td>
-          <td class="columnStyleTop">
-            ৯১
-          </td>
-          <td class="columnStyleTop">
-            
-          <td class="columnStyleTop">
-            
-          </td>
-          <td class="columnStyleTop">
-            ০
-          </td>
-          <td class="columnStyleTop">
-            ৮৭.৫০
-          </td>
-          
-      </tr>
-            
-        </table>
-            </div>
+              <table class="table table-bordered" cellpadding="3" cellspacing="0" style="margin: 0 auto;" width="100%">
+                  <tr style="text-align: center;">
+                      <td class="columnStyleTop">পরীক্ষার নাম</td>
+                      <td class="columnStyleTop">সাল</td>
+                      <td colspan="3"  class="columnStyleTop">মোট পরীক্ষার্থী</td>
+                      <td colspan="3" class="columnStyleTop">পাসকৃত শিক্ষার্থী</td>
+                      <td colspan="3" class="columnStyleTop">জিপিএ ৫.০০</td>
+                      <td colspan="3" class="columnStyleTop">পাসের হার</td>
+                  </tr>
+                  <tr style="text-align: center;">
+                      <td class="columnStyleTop"></td>
+                      <td class="columnStyleTop"></td>
+                      <td class="columnStyleTop">ছেলে</td>
+                      <td class="columnStyleTop">মেয়ে</td>
+                      <td class="columnStyleTop">মোট</td>
+                      <td class="columnStyleTop">ছেলে</td>
+                      <td class="columnStyleTop">মেয়ে</td>
+                      <td class="columnStyleTop">মোট</td>
+                      <td class="columnStyleTop">ছেলে</td>
+                      <td class="columnStyleTop">মেয়ে</td>
+                      <td class="columnStyleTop">মোট</td>
+                      <td class="columnStyleTop"></td>
+                  </tr>
 
+                  {% for result in exam_results %}
+                  <tr style="text-align: center;">
+                      <td class="columnStyleTop">{{ result.exam_name }}</td>
+                      <td class="columnStyleTop">{{ result.year }}</td> 
+                      <td class="columnStyleTop">{{ result.total_boys}}</td>
+                      <td class="columnStyleTop">{{ result.total_girls|add:"0" }}</td>
+                      <td class="columnStyleTop">{{ result.total_students|add:"0" }}</td>
+                      <td class="columnStyleTop">{{ result.passing_students_boys }}</td>
+                      <td class="columnStyleTop">{{ result.passing_students_girls }}</td>
+                      <td class="columnStyleTop">{{ result.passing_students_boys|add:result.passing_students_girls }}</td>
+                      <td class="columnStyleTop">{{ result.gpa_5_boys }}</td>
+                      <td class="columnStyleTop">{{ result.gpa_5_girls }}</td>
+                      <td class="columnStyleTop">{{ result.gpa_5_boys|add:result.gpa_5_girls }}</td>
+                      <td class="columnStyleTop">{{ result.pass_rate }}%</td>
+                  </tr> 
+                  {% endfor %}
+
+              </table>
+            </div>
         </div>
-        
-      </section> 
-  
+    </section> 
 {% endblock body %}
+
 
    
 

@@ -37,7 +37,7 @@
                     বিদ্যালয়ের <b style="font-family: Century Gothic; font-size: 10pt;">EIIN :</b>
                 </td>
                 <td class="columnStyleRight" colspan="3">
-                    <span id="ContentPlaceHolder1_txtEIIN">123839</span>
+                    <span id="ContentPlaceHolder1_txtEIIN">{{ school_info.school_elln }}</span>
                 </td>
             </tr>
             <tr>
@@ -45,7 +45,7 @@
                     বিদ্যালয়ের নাম :
                 </td>
                 <td class="columnStyleRight" colspan="3">
-                    <span id="ContentPlaceHolder1_txtSchoonNameBn">ভিতরভাগ বাইআপ উচ্চ বিদ্যালয়</span>
+                    <span id="ContentPlaceHolder1_txtSchoonNameBn">{{ school_info.school_name_bn }}</span>
                 </td>
             </tr>
             <tr>
@@ -53,7 +53,7 @@
                     SCHOOL NAME :
                 </td>
                 <td class="columnStyleRight" colspan="3" style="font-family: Century Gothic; font-size: 10pt;">
-                    <span id="ContentPlaceHolder1_txtSchoonNameEn">Bhitorbhag Biup High School</span>
+                    <span id="ContentPlaceHolder1_txtSchoonNameEn">{{ school_info.school_name_en }}</span>
                 </td>
             </tr>
             <tr>
@@ -61,7 +61,7 @@
                     গ্রাম/বাড়ী ও সড়কের বিবরণ :
                 </td>
                 <td class="columnStyleRight" colspan="3">
-                    <span id="ContentPlaceHolder1_txtVillage">জামনগর বাজার</span>
+                    <span id="ContentPlaceHolder1_txtVillage">{{ school_info.village_or_road }}</span>
                 </td>
             </tr>
             <tr>
@@ -69,13 +69,13 @@
                     ওয়ার্ড নম্বর :
                 </td>
                 <td class="columnStyleRight">
-                    <span id="ContentPlaceHolder1_txtWardNo">৫</span>
+                    <span id="ContentPlaceHolder1_txtWardNo">{{ school_info.word_no }}</span>
                 </td>
                 <td class="columnStyleLeft" style="border-left: none;">
                     ইউনিয়ন/পৌরসভা/সিটি কর্পোরেশন :
                 </td>
                 <td class="columnStyleRight">
-                    <span id="ContentPlaceHolder1_txtCityCorp">জামনগর</span>
+                    <span id="ContentPlaceHolder1_txtCityCorp">{{ school_info.union_city_corparation }}</span>
                 </td>
             </tr>
             <tr>
@@ -83,13 +83,13 @@
                     পোস্ট অফিস :
                 </td>
                 <td class="columnStyleRight">
-                    <span id="ContentPlaceHolder1_txtPostOffice">জামনগর বাজার</span>
+                    <span id="ContentPlaceHolder1_txtPostOffice">{{ school_info.post_office }}</span>
                 </td>
                 <td class="columnStyleLeft" style="border-left: none;">
                     পোস্ট কোড :
                 </td>
                 <td class="columnStyleRight">
-                    <span id="ContentPlaceHolder1_txtPostCode">৬৪১০</span>
+                    <span id="ContentPlaceHolder1_txtPostCode">{{ school_info.post_code }}</span>
                 </td>
             </tr>
             <tr>
@@ -97,13 +97,13 @@
                     পুলিশ স্টেশন :
                 </td>
                 <td class="columnStyleRight">
-                    <span id="ContentPlaceHolder1_txtThana">বাগাতিপাড়া</span>
+                    <span id="ContentPlaceHolder1_txtThana">{{ school_info.police_station }}</span>
                 </td>
                 <td class="columnStyleLeft" style="border-left: none;">
                     উপজেলা :
                 </td>
                 <td class="columnStyleRight">
-                    <span id="ContentPlaceHolder1_txtUpazila">বাগাতিপাড়া</span>
+                    <span id="ContentPlaceHolder1_txtUpazila">{{ school_info.upozila }}</span>
                 </td>
             </tr>
             <tr>
@@ -111,13 +111,13 @@
                     জেলা :
                 </td>
                 <td class="columnStyleRight">
-                    <span id="ContentPlaceHolder1_txtDistrict">নাটোর</span>
+                    <span id="ContentPlaceHolder1_txtDistrict">{{ school_info.district }}</span>
                 </td>
                 <td class="columnStyleLeft" style="border-left: none;">
                     বিভাগ :
                 </td>
                 <td class="columnStyleRight">
-                    <span id="ContentPlaceHolder1_txtDivision">রাজশাহী</span>
+                    <span id="ContentPlaceHolder1_txtDivision">{{ school_info.division }}</span>
                 </td>
             </tr>
             <tr>
@@ -125,14 +125,14 @@
                     মোবাইল :
                 </td>
                 <td class="columnStyleRight">
-                    <span id="ContentPlaceHolder1_txtTelephone">০১৭৩১৯৫০৩৯১</span>
+                    <span id="ContentPlaceHolder1_txtTelephone">{{ school_info.mobile_no }}</span>
                 </td>
                 <td class="columnStyleLeft" style="font-family: Century Gothic; font-size: 11pt;
                     border-left: none;">
                     E-Mail :
                 </td>
                 <td class="columnStyleRight" style="font-family: Century Gothic; font-size: 9pt;">
-                    <span id="ContentPlaceHolder1_txtEMail">jamnagarschool68@gmail.com</span>
+                    <span id="ContentPlaceHolder1_txtEMail">{{ school_info.email }}</span>
                 </td>
             </tr>
             <tr>
@@ -142,7 +142,7 @@
                 <td class="columnStyleRight" style="font-family: Century Gothic; font-size: 9pt;">
                     <a href="http://www.jabhs.edu.bd" id="ContentPlaceHolder1_lnkWebsite" target="_blank" style="text-decoration: none; color: #FF0000;
                         font-weight: bold;">
-                        <span id="ContentPlaceHolder1_txtWebsite">www.jabhs.edu.bd</span></a>
+                        <span id="ContentPlaceHolder1_txtWebsite">{{ school_info.website }}</span></a>
                 </td>
                 <td class="columnStyleLeft" style="border-left: none;">
                     শিক্ষার্থীর সংখ্যা :
@@ -157,13 +157,13 @@
                     বিদ্যালয়ের শিফট :
                 </td>
                 <td class="columnStyleRight">
-                    <span id="ContentPlaceHolder1_txtSchoolShift">এক শিফট</span>
+                    <span id="ContentPlaceHolder1_txtSchoolShift">{{ school_info.school_shit }}</span>
                 </td>
                 <td class="columnStyleLeft" style="border-left: none;">
                     বিদ্যালয়ের ধরণ :
                 </td>
                 <td class="columnStyleRight">
-                    <span id="ContentPlaceHolder1_txtSchoolType">বালক/বালিকা</span>
+                    <span id="ContentPlaceHolder1_txtSchoolType">{{ school_info.school_chars }}</span>
                 </td>
             </tr>
             <tr>
@@ -174,9 +174,9 @@
                     <table cellspacing="0">
                         <tr>
                             <td style="text-align: right; padding-right: 5px;">
-                                প্রভাতি শিফট :
+                                {{ school_info.school_activites }}
                             </td>
-                            <td>
+                            {% comment %} <td>
                                 <span id="ContentPlaceHolder1_txtShiftMorningFrom">ষষ্ঠ</span>
                             </td>
                             <td style="text-align: right; padding-right: 5px;">
@@ -184,7 +184,7 @@
                             </td>
                             <td>
                                 <span id="ContentPlaceHolder1_txtShiftMorningTo">দশম</span>
-                            </td>
+                            </td> {% endcomment %}
                         </tr>
                         
                         
@@ -196,13 +196,13 @@
                     মোট জমির পরিমান (একর) :
                 </td>
                 <td class="columnStyleRight">
-                    <span id="ContentPlaceHolder1_txtTotalLand">৩</span>
+                    <span id="ContentPlaceHolder1_txtTotalLand">{{ school_info.total_land }}</span>
                 </td>
                 <td class="columnStyleLeft" style="border-left: none;">
                     ভবন সংখ্যা :
                 </td>
                 <td class="columnStyleRight">
-                    <span id="ContentPlaceHolder1_txtTotalBuilding">৭</span>
+                    <span id="ContentPlaceHolder1_txtTotalBuilding">{{ school_info.total_vobon }}</span>
                 </td>
             </tr>
             <tr>
@@ -210,13 +210,13 @@
                     মোট শ্রেণিকক্ষ সংখ্যা :
                 </td>
                 <td class="columnStyleRight">
-                    <span id="ContentPlaceHolder1_txtTotalClassRoom">১৫</span>
+                    <span id="ContentPlaceHolder1_txtTotalClassRoom">{{ school_info.total_classroom }}</span>
                 </td>
                 <td class="columnStyleLeft" style="border-left: none;">
                     মাল্টিমিডিয়া শ্রেণিকক্ষ সংখ্যা :
                 </td>
                 <td class="columnStyleRight">
-                    <span id="ContentPlaceHolder1_txtMultimediaRoom">১</span>
+                    <span id="ContentPlaceHolder1_txtMultimediaRoom">{{ school_info.total_multimedia_room }}</span>
                 </td>
             </tr>
             <tr>
@@ -224,13 +224,13 @@
                     আইসিটি ল্যাব সংখ্যা :
                 </td>
                 <td class="columnStyleRight">
-                    <span id="ContentPlaceHolder1_txtICTLab">১</span>
+                    <span id="ContentPlaceHolder1_txtICTLab">{{ school_info.total_ict_lab }}</span>
                 </td>
                 <td class="columnStyleLeft" style="border-left: none;">
                     বিজ্ঞানাগার এর জন্য কক্ষ সংখ্যা :
                 </td>
                 <td class="columnStyleRight">
-                    <span id="ContentPlaceHolder1_txtLaboratory">১</span>
+                    <span id="ContentPlaceHolder1_txtLaboratory">{{ school_info.total_room_for_science }}</span>
                 </td>
             </tr>
             <tr>
@@ -238,13 +238,13 @@
                     পাঠাগার এর জন্য কক্ষ সংখ্যা :
                 </td>
                 <td class="columnStyleRight">
-                    <span id="ContentPlaceHolder1_txtLibrary">১</span>
+                    <span id="ContentPlaceHolder1_txtLibrary">{{ school_info.total_library_room }}</span>
                 </td>
                 <td class="columnStyleLeft" style="border-left: none;">
                     অডিটোরিয়াম আছে কি না :
                 </td>
                 <td class="columnStyleRight">
-                    <span id="ContentPlaceHolder1_txtAuditorium">নাই</span>
+                    <span id="ContentPlaceHolder1_txtAuditorium">{% if school_info.has_auditorium %}আছে{% else %}নাই{% endif %}</span>
                 </td>
             </tr>
             <tr>
@@ -252,7 +252,7 @@
                     সীমানা প্রাচীর আছে কি না :
                 </td>
                 <td class="columnStyleRight" colspan="3">
-                    <span id="ContentPlaceHolder1_txtBoundary">আছে</span>
+                    <span id="ContentPlaceHolder1_txtBoundary">{% if school_info.has_boundary %}আছে{% else %}নাই{% endif %}</span>
                 </td>
             </tr>
             <tr>
@@ -260,7 +260,7 @@
                     খেলার মাঠ আছে কি না :
                 </td>
                 <td class="columnStyleRight" colspan="3">
-                    <span id="ContentPlaceHolder1_txtBoundary">আছে</span>
+                    <span id="ContentPlaceHolder1_txtBoundary">{% if school_info.has_playground %}আছে{% else %}নাই{% endif %}</span>
                 </td>
             </tr>
         </table>

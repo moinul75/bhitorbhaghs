@@ -1,7 +1,18 @@
 from typing import Any
 from django.shortcuts import render,redirect 
 from django.views.generic import TemplateView 
-from .models import Qoutes,Gallary,Slider,Contact,Notice,SchoolInfo,Teacher
+from .models import (
+    Qoutes,
+    Gallary,
+    Slider,
+    Contact,
+    Notice,
+    SchoolInfo, 
+    ClassInfo,
+    Teacher,
+    ExamResult, 
+    IntroductionSchool
+)
 from .forms import ComplainForm,StudentAdmissionForm 
 from django.contrib import messages 
 from django.views.generic.edit import FormView
@@ -29,6 +40,10 @@ class HomeView(TemplateView):
     
 class AboutView(TemplateView):
     template_name = 'about.html' 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['school_info'] = IntroductionSchool.objects.first()
+        return context
     
     
     
@@ -54,7 +69,7 @@ class ContactView(TemplateView):
         form = ComplainForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect(request.path_info)  # Redirect back to the same page
+            return redirect(request.path_info) 
         context = self.get_context_data()
         context['form'] = form
         return self.render_to_response(context)
@@ -66,7 +81,7 @@ class AdmissionView(FormView):
     def form_valid(self, form):
         print("Form Data:", form.cleaned_data)
         form.save()
-        messages.success(self.request, 'আপনার আবেদন সফলভাবে জমা হয়েছে!')  # Success message
+        messages.success(self.request, 'আপনার আবেদন সফলভাবে জমা হয়েছে!')  
         return super().form_valid(form)
 
     def form_invalid(self, form):
@@ -97,7 +112,12 @@ class  TeachersView(TemplateView):
     
     
 class StuentsView(TemplateView): 
-    template_name = 'student.html' 
+    template_name = 'student.html'   
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs) 
+        context['student_info'] = ClassInfo.objects.all() 
+        return context
     
 
 class GallaryView(TemplateView): 
@@ -109,5 +129,10 @@ class GallaryView(TemplateView):
         return context
     
 class ResultView(TemplateView): 
-    template_name = 'result.html'
+    template_name = 'result.html' 
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['exam_results'] = ExamResult.objects.all()
+        return context
     

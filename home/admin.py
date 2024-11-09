@@ -1,5 +1,21 @@
 from django.contrib import admin 
-from .models import Slider,Complain,Contact,SocialMedia,Teacher,ImportantLink,Qoutes,Gallary,Icon,ExamResult,Notice,SchoolInfo,ClassInfo,StudentAdmission
+from .models import (
+    Slider,
+    Complain,
+    Contact,
+    SocialMedia,
+    Teacher,
+    ImportantLink,
+    Qoutes,
+    Gallary,
+    Icon,
+    ExamResult,
+    Notice,
+    SchoolInfo,
+    ClassInfo,
+    StudentAdmission,
+    IntroductionSchool
+)
 
 # Register your models here. 
 admin.site.register(Slider) 
@@ -15,6 +31,7 @@ admin.site.register(ExamResult)
 admin.site.register(Notice)  
 admin.site.register(SchoolInfo)  
 admin.site.register(StudentAdmission)
+admin.site.register(IntroductionSchool)
 
 @admin.register(ClassInfo)
 class ClassInfoAdmin(admin.ModelAdmin):
